@@ -1,7 +1,8 @@
-import {Link} from 'react-router-dom';
+import {Outlet} from 'react-router-dom';
 import LandingPage from './LandingPage';
 import Testimonials from './welcome_sections/Testimonials';
 import MobileApps from './welcome_sections/MobileApps';
+import Features from './welcome_sections/Features';
 
 function Welcome() {
     return (
@@ -10,9 +11,7 @@ function Welcome() {
                 <LandingPage></LandingPage>
             </section>
             <section>
-                <div>Hola que onda!</div>
-                <div><Link to="/user/dashboard">enlace al dashboard</Link></div>
-                <div><Link to="/usuario/inicio">enlace a un path random</Link></div>
+                <Features></Features>
             </section>
             <section>
                 <Testimonials></Testimonials>
@@ -20,6 +19,7 @@ function Welcome() {
             <section>
                 <MobileApps></MobileApps>
             </section>
+            <Outlet/>
         </>
     );
 }
