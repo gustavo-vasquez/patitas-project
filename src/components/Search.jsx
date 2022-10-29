@@ -17,9 +17,19 @@ export const Search = (props) => {
 	} */
 
 	return (
-		<div id="search_wrapper" className="input-group">
-			<button type="button" id="search_button"><i className="bi bi-search"></i></button>
-			<input id='hola' type="text" className="form-control" placeholder="Buscar por refugio o zona" aria-label="Buscar por refugio o zona" autoFocus={!shouldBeFocus}/>
+		<div className="input-group">
+			{/*<button id="shelter_zones" className="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Recoleta</button>
+			<ul className="dropdown-menu">
+				<li><a className="dropdown-item" href="#shelter_input">Congreso</a></li>
+				<li><a className="dropdown-item" href="#shelter_input">Monserrat</a></li>
+				<li><a className="dropdown-item" href="#shelter_input">Palermo</a></li>
+				<li><a className="dropdown-item" href="#shelter_input">San Isidro</a></li>
+				<li><a className="dropdown-item" href="#shelter_input">Saavedra</a></li>
+				<li><hr className="dropdown-divider"/></li>
+				<li><a className="dropdown-item" href="#shelter_input">Capital federal</a></li>
+			</ul>*/}
+			<input id="shelter_search" type="text" className="form-control" placeholder="Buscar por refugio o barrio porteño" aria-label="Buscar por refugio o barrio porteño" autoFocus={!shouldBeFocus}/>
+			<button id="shelter_search_button" type="button" className="btn"><i className="bi bi-search"></i></button>
 		</div>
 	);
 }

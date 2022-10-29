@@ -12,12 +12,15 @@ function Navbar(props) {
                 </button>
                 <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div className="offcanvas-header">
-                        {/*<h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>*/}
-                        <Search/>
+                        <ul className="navbar-nav auth-wrapper">
+                            <li>
+                                <Link id="signin" to="/auth/signin" className="btn btn-primary">Acceder</Link>
+                            </li>
+                        </ul>
                         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div className="offcanvas-body" id="navbarSupportedContent">
-                        <ul className="navbar-nav">
+                        {/*<ul className="navbar-nav">
                             <li className="nav-item">
                                 <Link className="nav-link" aria-current="page" to="#">Sobre nosotros</Link>
                             </li>
@@ -30,11 +33,11 @@ function Navbar(props) {
                             <li className="nav-item">
                                 <Link className="nav-link" to="#">Contacto</Link>
                             </li>
-                        </ul>
-                        <div className="d-flex ms-auto me-4">
+                        </ul>*/}
+                        <div id="search_wrapper" className="d-flex mx-auto">
                             <Search/>
                         </div>
-                        <ul id="auth_wrapper" className="navbar-nav">
+                        <ul className="navbar-nav auth-wrapper">
                             <li>
                                 <Link id="signin" to="/auth/signin" className="btn btn-primary">Acceder</Link>
                             </li>

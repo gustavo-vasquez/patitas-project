@@ -17,10 +17,8 @@ function LandingPage() {
             <div className="row">
                 <div className="col-12 col-md-6">
                     <div className="legend-wrapper py-4">
-                        <h1>Título del landing page a desarrollar</h1>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        </p>
+                        <h1>¡Se parte de algo maravilloso!</h1>
+                        <p>Adoptar siempre es una acción noble para darle a un animal un hogar y familia que lo haga feliz. Por eso, desde Patitas te facilitamos el proceso para que puedas encontrar ese gran amigo que estás buscando sin moverte de tu casa. ¡Anímate!</p>
                         <button className="btn btn-lg btn-primary">Únete a la comunidad</button>
                     </div>
                 </div>

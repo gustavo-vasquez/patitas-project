@@ -4,7 +4,7 @@ function MobileApps() {
     return (
         <div id="mobile_apps">
             <i className="bi bi-phone-vibrate"></i>
-            <h1>Descarga nuestra app móvil</h1>
+            <h1 className="display-5">Descarga nuestra app móvil</h1>
             <p>¡Nuestra aplicación está disponible para cualquier dispositivo Android o iOS! ¡Descárgalo ahora para comenzar!</p>
             <div className="badges">
                 <Link className="badge-link" to="/img/google-play-badge.svg" target="_blank" rel="noopener noreferrer">

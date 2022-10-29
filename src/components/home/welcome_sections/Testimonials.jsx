@@ -2,7 +2,7 @@ function Testimonials() {
     return (
         <div id="testimonials">
             <i className="bi bi-megaphone"></i>
-            <h1>Opinión de nuestros usuarios</h1>
+            <h1 className="display-5">Opinión de nuestros usuarios</h1>
             <div className="row">
                 <div className="col-12 col-md-4">
                     <blockquote className="blockquote">
