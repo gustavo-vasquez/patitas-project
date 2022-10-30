@@ -3,10 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Register(props) {
     const navigate = useNavigate();
-	const [didMount, setDidMount] = useState(false);
+	//const [didMount, setDidMount] = useState(false);
 	//const [formError, setFormError] = useState();
 
-	useEffect(() => {
+	/*useEffect(() => {
 		const goBack = (event) => {
 			if(didMount && (event.key === 'Escape' || !event.target.closest('#authentication_wrapper')))
 				navigate(-1);
@@ -20,17 +20,39 @@ function Register(props) {
 			document.removeEventListener("keydown", goBack);
 			document.removeEventListener("click", goBack);
 		}
-	}, [navigate, didMount]);
+	}, [navigate, didMount]);*/
+
+    const doRegister = (event) => {
+		event.preventDefault();
+
+		try {
+			const userData = {
+				username: 'cosme_fulanito',
+				email: 'cosme.fulanito@gmail.com',
+				profilePicture: '/img/default_profile_picture.png'
+			};
+
+			localStorage.setItem('userData', JSON.stringify(userData));
+				
+			navigate('/shelter/1', {
+				replace: true
+			});
+		}
+		catch(error) {
+			return {
+				title: "Ocurrió un error inesperado. Inténtelo más tarde.",
+				message: error
+			}
+		}
+	}
 
     return (
-        <>
-        <div className="overlay"></div>
-        <div id="authentication_wrapper" className="card">
+        <div id="register_wrapper" className="card">
             <div className="card-body">
-                <form>
+                <form id="register_form" onSubmit={doRegister}>
                     <legend>Únete y empieza a compartir</legend>
                     <div className="py-2">
-                        <input type="text" className="form-control" placeholder="Nombre de usuario" autoFocus/>
+                        <input type="text" className="form-control" placeholder="Nombre de usuario"/>
                     </div>
                     <div className="py-2">
                         <input type="text" className="form-control" placeholder="Correo electrónico"/>
@@ -45,13 +67,12 @@ function Register(props) {
                         <input type="checkbox" className="form-check-input" id="terms_and_conditions"/>
                         <label className="form-check-label" htmlFor="terms_and_conditions">Comprendo y acepto los <Link to="/auth/terms">términos y condiciones</Link>.</label>
                     </div>
-                    <div className="d-grid gap-2">
+                    <div className="pb-2">
                         <button type="submit" className="btn btn-primary">Crea tu cuenta</button>
                     </div>
                 </form>
             </div>
         </div>
-        </>
     );
 }
 

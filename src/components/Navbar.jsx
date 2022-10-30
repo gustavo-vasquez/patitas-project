@@ -66,10 +66,10 @@ function Navbar(props) {
                                 </li>
                             </ul> :
                         <>
-                            <span className="nav-text-username">{userDataObject.username}</span>
+                            <span className="nav-text-username" title={userDataObject.email}>{userDataObject.username}</span>
                             <ul className="navbar-nav user-actions">
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/user/profile" title={userDataObject.email}><img className="img-fluid nav-profile-picture" width={20} src={userDataObject.profilePicture} alt="profile_picture"/></Link>
+                                    <Link className="nav-link" to="/user/profile" title="Ver perfil"><img className="img-fluid nav-profile-picture" width={20} src={userDataObject.profilePicture} alt="profile_picture"/></Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/user/settings" title="Configuración"><i className="bi bi-gear-fill"></i></Link>

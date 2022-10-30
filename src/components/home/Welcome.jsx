@@ -19,7 +19,7 @@ function Welcome() {
             <section>
                 <MobileApps></MobileApps>
             </section>
-            <Outlet/>
+            {/*<Outlet/>*/}
         </>
     );
 }

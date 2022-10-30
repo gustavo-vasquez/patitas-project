@@ -59,6 +59,68 @@
     object-fit: cover;
 }
 
+/* Publicación */
+
+.post-wrapper {
+    position: fixed;
+    height: 90vh;
+    width: 90vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 1111;
+    background-color: white;
+    border-radius: var(--default-border-radius);
+    border: 1px solid var(--default-border-color);
+    box-shadow: 0px 0px 8px 0rem var(--default-border-color);
+    animation: growUp .25s;
+}
+
+.post-wrapper > .row {
+    height: inherit;
+}
+
+@-webkit-keyframes growUp {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes growUp {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.post-image {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.close-button {
+    text-align: right;
+}
+
+.close-button:hover {
+    color: red;
+}
+
+.close-button button {
+    border: none;
+}
+
+.close-button i {
+    font-size: xx-large;
+}
+
 /* Comentarios */
 
 .comment-wrapper {

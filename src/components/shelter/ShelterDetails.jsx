@@ -1,7 +1,7 @@
-import {Link} from 'react-router-dom';
+import {Link,Outlet,useLocation} from 'react-router-dom';
 
 function ShelterDetails(props) {
-    //const location = useLocation();
+    const {pathname} = useLocation();
 
     function thumbnail_loop() {
 		let thumbs = [];
@@ -9,7 +9,7 @@ function ShelterDetails(props) {
 		for(let i = 0;i < 16;i++) {
 			thumbs.push(
                 <div className='col-md-4 col-xl-3' key={i}>
-                        <img className='img-fluid' src='/img/thumbnail.jpg' alt='post_thumbnail'/>
+                    <Link to={`${pathname}/publication/${i+1}`}><img className='img-fluid' src='/img/thumbnail.jpg' alt='post_thumbnail'/></Link>
                 </div>
             );
 		}
@@ -109,11 +109,12 @@ function ShelterDetails(props) {
 						<div className="tab-pane fade" id="pills-comment" role="tabpanel" aria-labelledby="pills-comment-tab" tabIndex="0">
                             {comments_loop()}
                         </div>
-						<div className="tab-pane fade" id="pills-veterinary" role="tabpanel" aria-labelledby="pills-veterinary-tab" tabIndex="0">Coming soon...</div>
-						<div className="tab-pane fade" id="pills-moreinfo" role="tabpanel" aria-labelledby="pills-moreinfo-tab" tabIndex="0">Coming soon...</div>
+						<div className="tab-pane fade" id="pills-veterinary" role="tabpanel" aria-labelledby="pills-veterinary-tab" tabIndex="0">Pendiente...</div>
+						<div className="tab-pane fade" id="pills-moreinfo" role="tabpanel" aria-labelledby="pills-moreinfo-tab" tabIndex="0">Pendiente...</div>
 					</div>
 				</div>
             </div>
+            <Outlet/>
         </div>
     );
 }
