@@ -267,8 +267,8 @@ section p {
 	position: relative;
 	top: 50%;
 	transform: translate(-10%,-50%);
-	-webkit-animation: slideToRight 0.5s forwards;
-    animation: slideToRight 0.5s forwards;
+	-webkit-animation: slideToRight .8s forwards;
+    animation: slideToRight .8s forwards;
 }
 
 @-webkit-keyframes slideToRight {
@@ -282,8 +282,8 @@ section p {
 .logo-wrapper {
 	text-align: right;
 	transform: translateX(10%);
-	-webkit-animation: slideToLeft 0.5s forwards;
-    animation: slideToLeft 0.5s forwards;
+	-webkit-animation: slideToLeft .8s forwards;
+    animation: slideToLeft .8s forwards;
 }
 
 .logo-wrapper > img {

@@ -1,5 +1,5 @@
 import {useState,useEffect, useCallback} from 'react';
-import {useNavigate} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 function Publication() {
     const navigate = useNavigate();
@@ -41,6 +41,32 @@ function Publication() {
                         <button className="btn" type="button" title="Cerrar" onClick={closePublication}>
                             <i className="bi bi-x"></i>
                         </button>
+                    </div>
+                    <div className="post-content">
+                        <div className="request-adoption">
+                            <h4>¿Es de tu agrado? ¿Quieres verlo en persona?</h4>
+                            <Link to="/user/18/shift" className="btn btn-primary" type="button">Solicitar turno</Link>
+                        </div>
+                        <div className="information">
+                            <span>Nombre:</span>
+                            <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> Ayudante de santa</p>
+                            <span>Edad aproximada:</span>
+                            <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> 4 años</p>
+                            <span>Situación previa:</span>
+                            <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> En la calle</p>
+                            <span>Vacunas aplicadas:</span>
+                            <ul>
+                                <li>Antirrábica</li>
+                                <li>Polivalente</li>
+                                <li>Parvovirus</li>
+                            </ul>
+                            <span>Raza:</span>
+                            <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> Labrador</p>
+                            <span>Altura:</span>
+                            <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> 1.2m</p>
+                            <p>Observaciones:</p>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                        </div>
                     </div>
                 </div>
             </div>

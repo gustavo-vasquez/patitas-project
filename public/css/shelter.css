@@ -77,7 +77,7 @@
     animation: growUp .25s;
 }
 
-.post-wrapper > .row {
+.post-wrapper > .row, .post-wrapper > .row > div[class^="col"] {
     height: inherit;
 }
 
@@ -119,6 +119,20 @@
 
 .close-button i {
     font-size: xx-large;
+}
+
+.post-content {
+    height: calc(100% - 60px);
+    overflow-y: auto;
+}
+
+.request-adoption {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.information ul > li {
+    list-style-type: square;
 }
 
 /* Comentarios */
