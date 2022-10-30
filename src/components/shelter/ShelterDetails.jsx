@@ -1,8 +1,7 @@
-import {useLocation, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function ShelterDetails(props) {
     //const location = useLocation();
-	//let {username, email, profilePicture} = location.state;
 
     function thumbnail_loop() {
 		let thumbs = [];
@@ -28,25 +27,25 @@ function ShelterDetails(props) {
             let stars_llenas = [];
             if(i < estrellas.length) {
                 for(let j = 0; j < estrellas[i]; j++) {
-                    stars_llenas.push(<i class="bi bi-star-fill"></i>);
+                    stars_llenas.push(<i className="bi bi-star-fill" key={j}></i>);
                 }
 
                 for(let k = estrellas[i]; k < 5; k++) {
-                    stars_llenas.push(<i class="bi bi-star"></i>);
+                    stars_llenas.push(<i className="bi bi-star" key={k}></i>);
                 }
             }
             else {
                 for(let j = 0; j < estrellas[1]; j++) {
-                    stars_llenas.push(<i class="bi bi-star-fill"></i>);
+                    stars_llenas.push(<i className="bi bi-star-fill" key={j}></i>);
                 }
 
                 for(let k = estrellas[1]; k < 5; k++) {
-                    stars_llenas.push(<i class="bi bi-star"></i>);
+                    stars_llenas.push(<i className="bi bi-star" key={k}></i>);
                 }
             }
 
             comments.push(
-                <div className="comment-wrapper">
+                <div className="comment-wrapper" key={i}>
                     <div className="row pb-2">
                         <div className="col-auto">
                             <img className="img-fluid" src="/img/default_profile_picture.png" alt="profile_picture"/>
@@ -77,10 +76,10 @@ function ShelterDetails(props) {
             <div className="row">
                 <div className="col-6">
                     <h1 className="display-3">Refugio #1</h1>
-                    <p className="text-muted"><i class="bi bi-geo-alt-fill"></i> Ubicado en Moreno 1623, Monserrat</p>
+                    <p className="text-muted"><i className="bi bi-geo-alt-fill"></i> Ubicado en Moreno 1623, Monserrat</p>
                 </div>
                 <div className="col-6 text-end">
-                    <h1 className="display-3">4.5 <i class="bi bi-star-fill"></i></h1>
+                    <h1 className="display-3">4.5 <i className="bi bi-star-fill"></i></h1>
                     <p className="text-muted">500 valoraciones</p>
                 </div>
             </div>

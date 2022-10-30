@@ -152,10 +152,6 @@ blockquote {
 
 /* Barra de navegación */
 
-.patitas-logo {
-	width: 2rem;
-}
-
 nav {
 	/*backdrop-filter: blur(8px);*/
 	border-bottom: 1px solid #dddddd;
@@ -165,11 +161,32 @@ nav {
 .navbar-brand {
 	font-family: 'Quicksand';
 	font-weight: bold;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.patitas-logo {
+	width: 2.5rem;
+}
+
+.navbar-brand > span {
+	vertical-align: middle;
 }
 
 .navbar-nav a.btn {
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
+}
+
+.nav-text-username {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.user-actions > li > a {
+	font-size: 1.5rem;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 /* Barra de búsqueda */

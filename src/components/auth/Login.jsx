@@ -22,21 +22,25 @@ function Login(props) {
 		}
 	}, [navigate, didMount]);
 
-	const doLogin = async (event) => {
+	const doLogin = (event) => {
 		event.preventDefault();
 
 		try {
-			const userData = {
+			/* const userData = {
 				username: 'cosme_fulanito',
 				email: 'cosme.fulanito@gmail.com',
-				profilePicture: '/img/default_profile_picture.png',
-				accessToken: 'blabla',
-				refreshToken: 'blabla'
-			};
+				profilePicture: '/img/default_profile_picture.png'
+			}; */
+
+			localStorage.setItem('userData', JSON.stringify({
+				username: 'cosme_fulanito',
+				email: 'cosme.fulanito@gmail.com',
+				profilePicture: '/img/default_profile_picture.png'
+			}));
 				
-			navigate('/user/profile', {
-				replace: true,
-				state: userData
+			navigate('/shelter/1', {
+				replace: true
+				//state: userData
 			});
 		}
 		catch(error) {

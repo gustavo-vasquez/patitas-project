@@ -17,6 +17,7 @@
 .nav-link {
     font-size: 1.1rem;
     font-weight: 300;
+    color: initial;
 }
 
 .nav-link:hover {
@@ -27,7 +28,7 @@
 	background-color: transparent !important;
     border-bottom: 2px solid var(--default-color-theme);
     border-radius: unset;
-    color: black !important;
+    color: var(--default-color-theme) !important;
     font-weight: bold;
 }
 
