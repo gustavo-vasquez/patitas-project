@@ -1,0 +1,81 @@
+/* Barra superior */
+
+.bi-geo-alt-fill {
+    color: orangered;
+}
+
+.bi-star-fill {
+    color: #f1cb00;
+}
+
+.bi-star {
+    color: goldenrod;
+}
+
+/* Pestañas */
+
+.nav-link {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.nav-link:hover {
+	color: var(--default-color-theme);
+}
+
+.nav-link.active {
+	background-color: transparent !important;
+    border-bottom: 2px solid var(--default-color-theme);
+    border-radius: unset;
+    color: black !important;
+    font-weight: bold;
+}
+
+.tab-pane {
+    padding: 1.5rem;
+}
+
+/* Galería */
+
+.thumbnails-wrapper > * {
+    padding-top: calc(var(--bs-gutter-x) * .5);
+	padding-bottom: calc(var(--bs-gutter-x) * .5);
+}
+
+/* .thumbnail {
+    width: 300px;
+    height: 300px;
+    border-radius: var(--default-border-radius);
+    background-image: url('../img/thumbnail.jpg');
+    background-size: cover;
+    background-position: center;
+} */
+
+.thumbnails-wrapper img {
+    border-radius: var(--default-border-radius);
+    width: 300px;
+	height: 300px;
+    object-fit: cover;
+}
+
+/* Comentarios */
+
+.comment-wrapper {
+    padding-bottom: 1rem;
+}
+
+.comment-wrapper img {
+    width: 40px;
+    border-radius: var(--default-border-radius);
+}
+
+.comment-name {
+    color: initial;
+    margin-bottom: 0;
+}
+
+.comment-date {
+    font-family: 'Quicksand';
+    font-size: 0.9rem;
+    color: gray;
+}

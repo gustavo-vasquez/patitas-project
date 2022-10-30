@@ -1,5 +1,5 @@
 import {Outlet} from 'react-router-dom';
-import LandingPage from './LandingPage';
+import LandingPage from './welcome_sections/LandingPage';
 import Testimonials from './welcome_sections/Testimonials';
 import MobileApps from './welcome_sections/MobileApps';
 import Features from './welcome_sections/Features';

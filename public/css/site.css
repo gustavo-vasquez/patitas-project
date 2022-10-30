@@ -76,6 +76,10 @@ body {
 	font-family: 'Inter';
 }
 
+#root > :nth-child(2):not(section) {
+	padding-top: 5rem;
+}
+
 :root {
 	--default-color-theme: #0077ff;
 	--default-input-border-color: #55aafb;
@@ -93,7 +97,7 @@ a{
 	text-decoration: none;
 }
 
-button:not(#shelter_search_button), a.btn {
+.btn:not(#shelter_search_button) {
 	border-radius: var(--default-border-radius) !important;
 }
 
@@ -111,24 +115,6 @@ button:not(#shelter_search_button), a.btn {
 	background-color: transparent;
 	color: unset;
 }*/
-
-#shelter_search {
-	border: 1px solid dimgray;
-	border-right: none;
-	border-top-left-radius: var(--default-border-radius);
-	border-bottom-left-radius: var(--default-border-radius);
-}
-
-#shelter_search_button {
-	border-color: dimgray;
-	border-top-right-radius: 1.375rem;
-    border-bottom-right-radius: 1.375rem;
-    border-left: none;
-}
-
-#shelter_search_button > i {
-	font-size: large;
-}
 
 .btn-primary {
 	background-color: var(--default-color-theme) !important;
@@ -190,6 +176,24 @@ nav {
 
 #search_wrapper {
 	width: 100%;
+}
+
+#shelter_search {
+	border: 1px solid dimgray;
+	border-right: none;
+	border-top-left-radius: var(--default-border-radius);
+	border-bottom-left-radius: var(--default-border-radius);
+}
+
+#shelter_search_button {
+	border-color: dimgray;
+	border-top-right-radius: 1.375rem;
+    border-bottom-right-radius: 1.375rem;
+    border-left: none;
+}
+
+#shelter_search_button > i {
+	font-size: large;
 }
 
 @media (min-width: 768px) {
@@ -329,4 +333,15 @@ section p {
 	top: 0;
 	bottom: 0;
 	z-index: 1;
+}
+
+
+/* Página de error 404 */
+
+.not-found-wrapper {
+	text-align: center;
+}
+
+.not-found-wrapper img {
+	border-radius: var(--default-border-radius);
 }

@@ -1,14 +1,15 @@
 import React from "react";
 import {Routes,Route} from 'react-router-dom';
 
-import Welcome from "./components/home/Welcome";
-import Login from "./components/auth/Login";
-import Register from "./components/auth/Register";
-import Dashboard from "./components/user/Dashboard";
-import NotFound from './components/errors/NotFound';
+import Welcome from "./home/Welcome";
+import Login from "./auth/Login";
+import Register from "./auth/Register";
+import Dashboard from "./user/Dashboard";
+import ShelterDetails from './shelter/ShelterDetails';
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import NotFound from './errors/NotFound';
 
 class Layout extends React.Component {
     render() {
@@ -21,6 +22,7 @@ class Layout extends React.Component {
                         <Route path="/auth/signup" element={<Register/>}></Route>
                     </Route>
                     <Route path="/user/dashboard" element={<Dashboard/>}></Route>
+                    <Route path="/shelter/:id" element={<ShelterDetails/>}></Route>
                     <Route path="*" element={<NotFound/>}></Route>
                 </Routes>
                 <Footer></Footer>
