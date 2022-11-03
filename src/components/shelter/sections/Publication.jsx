@@ -45,7 +45,7 @@ function Publication() {
                     <div className="post-content">
                         <div className="request-adoption">
                             <h4>¿Te gustaría adoptarlo? ¿Quieres verlo en persona?</h4>
-                            <Link to="/user/18/shift" className="btn btn-primary" type="button">Solicitar iniciar proceso de adopción</Link>
+                            <Link to="/user/18/shift" className="btn btn-primary" type="button">Iniciar proceso de adopción</Link>
                         </div>
                         <div className="information">
                             <span>Nombre:</span>

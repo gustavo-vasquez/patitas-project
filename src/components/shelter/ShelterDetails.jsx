@@ -1,7 +1,13 @@
-import {Link,Outlet,useLocation} from 'react-router-dom';
+import {Link,Outlet,useLocation,useParams} from 'react-router-dom';
+
+const shelterDb = require('../helpers/sheltersDb.json');
 
 function ShelterDetails(props) {
-    const {pathname} = useLocation();
+	const location = useLocation();
+    const {pathname} = location;
+    const params = useParams();
+
+    let shelterInfo = shelterDb.find(x => x.id === params.id);
 
     function thumbnail_loop() {
 		let thumbs = [];
@@ -75,11 +81,11 @@ function ShelterDetails(props) {
         <div className="shelter-details-wrapper">
             <div className="row">
                 <div className="col-6">
-                    <h1 className="display-3">Refugio #1</h1>
-                    <p className="text-muted"><i className="bi bi-geo-alt-fill"></i> Ubicado en Moreno 1623, Monserrat</p>
+                    <h1 className="display-3">{shelterInfo.name}</h1>
+                    <p className="text-muted"><i className="bi bi-geo-alt-fill"></i> Ubicado en {shelterInfo.address}, {shelterInfo.district}</p>
                 </div>
                 <div className="col-6 text-end">
-                    <h1 className="display-3">4.5 <i className="bi bi-star-fill"></i></h1>
+                    <h1 className="display-3">{shelterInfo.stars} <i className="bi bi-star-fill"></i></h1>
                     <p className="text-muted">500 valoraciones</p>
                 </div>
             </div>

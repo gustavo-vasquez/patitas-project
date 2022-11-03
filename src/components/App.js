@@ -5,6 +5,7 @@ import Welcome from "./home/Welcome";
 import AuthenticationForms from "./auth/AuthenticationForms";
 //import Register from "./auth/Register";
 import Dashboard from "./user/Dashboard";
+import Shelter from './shelter/Shelter';
 import ShelterDetails from './shelter/ShelterDetails';
 import Publication from "./shelter/sections/Publication";
 
@@ -21,6 +22,9 @@ class Layout extends React.Component {
                     <Route exact path="/" element={<Welcome/>}></Route>
                     <Route path="/auth/signin" element={<AuthenticationForms/>}></Route>
                     <Route path="/user/dashboard" element={<Dashboard/>}></Route>
+                    <Route path="/shelter" element={<Shelter/>}>
+                        <Route path="*" element={<NotFound/>}></Route>
+                    </Route>
                     <Route path="/shelter/:id" element={<ShelterDetails/>}>
                         <Route path="/shelter/:id/publication/:id" element={<Publication/>}></Route>
                     </Route>

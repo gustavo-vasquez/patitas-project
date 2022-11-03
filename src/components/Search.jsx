@@ -1,20 +1,27 @@
 import React from 'react';
-import {Link, useLocation} from 'react-router-dom';
+import {Link,useLocation,useNavigate} from 'react-router-dom';
+
+const shelterDb = require('./helpers/sheltersDb.json');
 
 export const Search = (props) => {
 	const location = useLocation();
-	let shouldBeFocus = location.pathname === '/' ? true : false;
+	const navigate = useNavigate();
+	//let shouldBeFocus = location.pathname === '/' ? true : false;
+	//console.log(location);
 
-	/* const log = (isblurred) => {
-		if(isblurred) {
-			document.getElementById('search_button').style = "box-shadow: 0px 1px 0px 0px var(--default-input-border-color);";
-			console.log("asdasd");
+	const triggerSuggestions = (event) => {
+		if(event.target.value.length >= 3) {
+			document.querySelector('.suggestions-wrapper').style.removeProperty('display');
 		}
-		else {
-			document.getElementById('search_button').style.removeProperty('box-shadow');
-			console.log("aaaaaaaaaa");
-		}
-	} */
+		else
+			document.querySelector('.suggestions-wrapper').style = "display: none;";
+	}
+
+	const suggestionClick = (event, id) => {
+		event.preventDefault();
+		document.querySelector('.suggestions-wrapper').style = "display: none;";
+		navigate(`/shelter/${id}`);
+	}
 
 	return (
 		<div className="input-group">
@@ -28,38 +35,19 @@ export const Search = (props) => {
 				<li><hr className="dropdown-divider"/></li>
 				<li><a className="dropdown-item" href="#shelter_input">Capital federal</a></li>
 			</ul>*/}
-			<input id="shelter_search" type="text" className="form-control" placeholder="Buscar por refugio o barrio porteño" aria-label="Buscar por refugio o barrio porteño" autoFocus={!shouldBeFocus}/>
+			<input id="shelter_search" onChange={triggerSuggestions} onClick={triggerSuggestions} type="text" className="form-control" placeholder="Buscar por refugio o barrio porteño" aria-label="Buscar por refugio o barrio porteño"/>
 			<button id="shelter_search_button" type="button" className="btn"><i className="bi bi-search"></i></button>
-			<div className="list-group suggestions-wrapper">
-				<Link href="#" className="list-group-item list-group-item-action" aria-current="true">
-					<div className="d-flex w-100 justify-content-between">
-					<h5 className="mb-1">Refugio #1</h5>
-					<span>4.5 <i className="bi bi-star-fill"></i></span>
-					</div>
-					<p className="mb-1">Moreno 1623, Monserrat</p>
-				</Link>
-				<Link href="#" className="list-group-item list-group-item-action">
-					<div className="d-flex w-100 justify-content-between">
-					<h5 className="mb-1">Refugio #2</h5>
-					<span>3 <i className="bi bi-star-fill"></i></span>
-					</div>
-					<p className="mb-1 text-muted">Av. del Libertador 4101, Palermo</p>
-				</Link>
-				<Link href="#" className="list-group-item list-group-item-action">
-					<div className="d-flex w-100 justify-content-between">
-					<h5 className="mb-1">Refugio #3</h5>
-					<span>5 <i className="bi bi-star-fill"></i></span>
-					</div>
-					<p className="mb-1 text-muted">Hipólito Yrigoyen 1849, Balvanera</p>
-				</Link>
-				<Link href="#" className="list-group-item list-group-item-action">
-					<div className="d-flex w-100 justify-content-between">
-					<h5 className="mb-1">Refugio #4</h5>
-					<span>2.6 <i className="bi bi-star-fill"></i></span>
-					</div>
-					<p className="mb-1 text-muted">Av. San Juan 350, San Telmo</p>
-				</Link>
-				<Link href="#" className="list-group-item list-group-item-action text-center">
+			<div className="list-group suggestions-wrapper" style={{'display': 'none'}}>
+				{shelterDb.map((shelter, index) =>
+					<Link to={`/shelter/${shelter.id}`} onClick={(event) => suggestionClick(event, shelter.id)} className="list-group-item list-group-item-action" aria-current="true" key={index}>
+						<div className="d-flex w-100 justify-content-between">
+							<h5 className="mb-1">{shelter.name}</h5>
+							<span>{shelter.stars} <i className="bi bi-star-fill"></i></span>
+						</div>
+						<p className="mb-1 text-muted">{shelter.address}, {shelter.district}</p>
+					</Link>
+				)}
+				<Link to="/results" onClick={triggerSuggestions} className="list-group-item list-group-item-action text-center">
 					<div className="d-flex w-100 justify-content-between text-center">
 						<small className="mb-1">Ver todos los resultados</small>
 					</div>
