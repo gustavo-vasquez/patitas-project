@@ -178,6 +178,21 @@ nav {
 	padding-right: 1.5rem;
 }
 
+.nav-item.dropdown {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.nav-item.dropdown:hover {
+	background-color: #f1f1f1;
+    border-radius: var(--default-border-radius);
+	transition: all 0.2s;
+}
+
+.nav-item.dropdown > a {
+	color: initial;
+}
+
 .nav-text-username {
 	margin-top: auto;
 	margin-bottom: auto;
@@ -227,6 +242,26 @@ nav {
 	.legend-wrapper > p {
 		font-size: 1rem;
 	}
+}
+
+.suggestions-wrapper {
+	position: absolute;
+    width: inherit;
+    margin: 0;
+    top: 100%;
+    border-radius: var(--default-border-radius) !important;
+	margin-top: 0.1rem;
+    /*border: 1px solid #dddddd;*/
+	box-shadow: 0px 0px 4px 0px dimgray;
+}
+
+.suggestions-wrapper > .list-group-item {
+	border: none;
+}
+
+.suggestions-wrapper h5, .suggestions-wrapper span {
+	font-family: 'Quicksand';
+	font-weight: bold;
 }
 
 /* Portada */

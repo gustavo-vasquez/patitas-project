@@ -42,6 +42,21 @@ function Navbar(props) {
                         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div className="offcanvas-body" id="navbarSupportedContent">
+                        <ul className="navbar-nav">
+                                <li class="nav-item dropdown">
+                                <Link class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Foros
+                                </Link>
+                                <ul class="dropdown-menu">
+                                    <li><Link class="dropdown-item" href="#">Animales abandonados</Link></li>
+                                    <li><Link class="dropdown-item" href="#">Mascotas perdidas</Link></li>
+                                    <li><Link class="dropdown-item" href="#">Noticias</Link></li>
+                                    <li><hr class="dropdown-divider"/></li>
+                                    <li><Link class="dropdown-item" href="#">Ayuda y asistencia</Link></li>
+                                    <li><Link class="dropdown-item" href="#">Sugerencias</Link></li>
+                                </ul>
+                            </li>
+                        </ul>
                         {/*<ul className="navbar-nav">
                             <li className="nav-item">
                                 <Link className="nav-link" aria-current="page" to="#">Sobre nosotros</Link>

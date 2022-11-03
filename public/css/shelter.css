@@ -111,6 +111,7 @@
 
 .close-button:hover {
     color: red;
+    transition: all 0.4s;
 }
 
 .close-button button {
@@ -124,6 +125,8 @@
 .post-content {
     height: calc(100% - 60px);
     overflow-y: auto;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
 }
 
 .request-adoption {
