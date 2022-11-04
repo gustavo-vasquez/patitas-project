@@ -49,7 +49,7 @@ function Navbar(props) {
                                 </Link>
                                 <ul className="dropdown-menu">
                                     <li><Link className="dropdown-item" to="/forum/topic/abandoned">Animales abandonados</Link></li>
-                                    <li><Link className="dropdown-item" to="/forum/topic/lost">Mascotas perdidas</Link></li>
+                                    <li><Link className="dropdown-item" to="/forum/topic/missing">Mascotas perdidas</Link></li>
                                     <li><Link className="dropdown-item" to="/forum/topic/news">Noticias</Link></li>
                                     <li><hr className="dropdown-divider"/></li>
                                     <li><Link className="dropdown-item" to="/forum/topic/support">Ayuda y asistencia</Link></li>
@@ -80,11 +80,12 @@ function Navbar(props) {
                                     <Link id="signin" to="/auth/signin" className="btn btn-primary">Acceder</Link>
                                 </li>
                             </ul> :
-                        <>
-                            <span className="nav-text-username" title={userDataObject.email}>{userDataObject.username}</span>
                             <ul className="navbar-nav user-actions">
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/user/profile" title="Ver perfil"><img className="img-fluid nav-profile-picture" width={20} src={userDataObject.profilePicture} alt="profile_picture"/></Link>
+                                    <Link className="nav-link nav-text-username" to="/user/profile" title={userDataObject.email}>{userDataObject.username}</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/user/profile" title="Ver perfil"><img className="img-fluid nav-profile-picture" width={24} src={userDataObject.profilePicture} alt="profile_picture"/></Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/user/settings" title="Configuración"><i className="bi bi-gear-fill"></i></Link>
@@ -93,7 +94,7 @@ function Navbar(props) {
                                     <Link className="nav-link" to="/user/logout" onClick={logout} title="Salir"><i className="bi bi-box-arrow-in-right"></i></Link>
                                 </li>
                             </ul>
-                        </>}
+                        }
                     </div>
                 </div>
             </div>

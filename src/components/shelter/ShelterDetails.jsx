@@ -15,7 +15,7 @@ function ShelterDetails(props) {
 		for(let i = 0;i < 16;i++) {
 			thumbs.push(
                 <div className='col-md-4 col-xl-3' key={i}>
-                    <Link to={`${pathname}/publication/${i+1}`}><img className='img-fluid' src='/img/thumbnail.jpg' alt='post_thumbnail'/></Link>
+                    <Link to={`${pathname}/publication/${shelterInfo.id}`}><img className='img-fluid' src='/img/thumbnail.jpg' alt='post_thumbnail'/></Link>
                 </div>
             );
 		}
@@ -51,23 +51,25 @@ function ShelterDetails(props) {
             }
 
             comments.push(
-                <div className="comment-wrapper" key={i}>
-                    <div className="row pb-2">
-                        <div className="col-auto">
-                            <img className="img-fluid" src="/img/default_profile_picture.png" alt="profile_picture"/>
+                <div className="col-12 col-md-6" key={i}>
+                    <div className="comment-wrapper">
+                        <div className="row">
+                            <div className="col-auto">
+                                <img className="img-fluid nav-profile-picture" src="/img/default_profile_picture.png" alt="profile_picture"/>
+                            </div>
+                            <div className="col-auto">
+                                <Link to="/user/10"><p className="comment-name">cosme_fulanito</p></Link>
+                                <p className="comment-date">27/10/2022 21:47</p>
+                            </div>
+                            <div>
+                                <h4 className="d-inline-block">{stars_llenas}</h4>
+                                <span className="ps-2">{(i < leyendas.length) ? leyendas[i] : leyendas[1]}</span>
+                            </div>
                         </div>
-                        <div className="col-auto">
-                            <Link to="/user/10"><p className="comment-name">cosme_fulanito</p></Link>
-                            <p className="comment-date">27/10/2022 21:47</p>
-                        </div>
-                        <div className="col-auto ms-auto">
-                            <h4 className="d-inline-block">{stars_llenas}</h4>
-                            <span className="ps-2">{(i < leyendas.length) ? leyendas[i] : leyendas[1]}</span>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <div className="row">
+                            <div className="col">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -113,7 +115,9 @@ function ShelterDetails(props) {
 							</div>
 						</div>
 						<div className="tab-pane fade" id="pills-comment" role="tabpanel" aria-labelledby="pills-comment-tab" tabIndex="0">
+                            <div className="row">
                             {comments_loop()}
+                            </div>
                         </div>
 						<div className="tab-pane fade" id="pills-veterinary" role="tabpanel" aria-labelledby="pills-veterinary-tab" tabIndex="0">Pendiente...</div>
 						<div className="tab-pane fade" id="pills-moreinfo" role="tabpanel" aria-labelledby="pills-moreinfo-tab" tabIndex="0">Pendiente...</div>

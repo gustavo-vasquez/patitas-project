@@ -42,7 +42,7 @@ function Shelter(props) {
     return (
         <div className="shelters-wrapper">
             <h1><i className="bi bi-geo-alt-fill"></i> Refugios encontrados en tu zona: Monserrat</h1>
-            <div className="row">{sheltersLoop('Monserrat', true)}</div>
+            <div className="row pb-4">{sheltersLoop('Monserrat', true)}</div>
             <h2 className="pt-4">Otros refugios que te pueden interesar</h2>
             <div className="row">{sheltersLoop('Monserrat', false)}</div>
         </div>
