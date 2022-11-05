@@ -7,7 +7,6 @@ export const Search = (props) => {
 	//const location = useLocation();
 	const navigate = useNavigate();
 	//let shouldBeFocus = location.pathname === '/' ? true : false;
-	//console.log(location);
 
 	const triggerSuggestions = (event) => {
 		if(event.target.value.length >= 3) {
@@ -19,11 +18,7 @@ export const Search = (props) => {
 
 	const suggestionClick = (event, id) => {
 		event.preventDefault();
-		document.querySelector('.suggestions-wrapper').style = "display: none;";
 		navigate(`/shelter/${id}`);
-	}
-
-	const searchLostFocus = (event) => {
 		document.querySelector('.suggestions-wrapper').style = "display: none;";
 	}
 
@@ -39,7 +34,7 @@ export const Search = (props) => {
 				<li><hr className="dropdown-divider"/></li>
 				<li><a className="dropdown-item" href="#shelter_input">Capital federal</a></li>
 			</ul>*/}
-			<input id="shelter_search" onChange={triggerSuggestions} onClick={triggerSuggestions} onBlur={searchLostFocus} type="text" className="form-control" placeholder="Buscar por refugio o barrio porteño" aria-label="Buscar por refugio o barrio porteño"/>
+			<input id="shelter_search" onChange={triggerSuggestions} onFocus={triggerSuggestions} type="text" className="form-control" placeholder="Buscar por refugio o barrio porteño" aria-label="Buscar por refugio o barrio porteño"/>
 			<button id="shelter_search_button" type="button" className="btn"><i className="bi bi-search"></i></button>
 			<div className="list-group suggestions-wrapper" style={{'display': 'none'}}>
 				{shelterDb.map((shelter, index) =>
@@ -51,11 +46,11 @@ export const Search = (props) => {
 						<p className="mb-1">{shelter.address}, {shelter.district}</p>
 					</Link>
 				)}
-				{/*<Link to="/results" onClick={triggerSuggestions} className="list-group-item list-group-item-action text-center">
+				<Link to="/results" onClick={triggerSuggestions} className="list-group-item list-group-item-action text-center">
 					<div className="d-flex w-100 justify-content-between text-center">
 						<small className="mb-1">Ver todos los resultados</small>
 					</div>
-				</Link>*/}
+				</Link>
 			</div>
 		</div>
 	);

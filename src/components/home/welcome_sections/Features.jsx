@@ -1,7 +1,7 @@
 function Features() {
     return (
         <div id="features">
-            <img className="img-fluid" width={400} src="/img/perro_leyendo.jpg" alt="perro_leyendo" />
+            <img className="img-fluid" width={400} src="/img/features/perro_leyendo.jpg" alt="perro_leyendo" />
             <h1 className="display-5">Echa un vistazo a algunas de las características de la plataforma</h1>
             <div className="row">
                 <div className="col-12 col-md-4">

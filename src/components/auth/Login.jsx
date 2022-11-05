@@ -34,7 +34,7 @@ function Login(props) {
 
 			localStorage.setItem('userData', JSON.stringify(userData));
 				
-			navigate('/shelter/1', {
+			navigate('/shelter', {
 				replace: true
 			});
 		}

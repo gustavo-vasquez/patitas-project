@@ -15,7 +15,7 @@ function ShelterDetails(props) {
 		for(let i = 0;i < 16;i++) {
 			thumbs.push(
                 <div className='col-md-4 col-xl-3' key={i}>
-                    <Link to={`${pathname}/publication/${shelterInfo.id}`}><img className='img-fluid' src='/img/thumbnail.jpg' alt='post_thumbnail'/></Link>
+                    <Link to={`${pathname}/publication/${i+1}`}><img className='img-fluid' src='/img/shelter/thumbnail.jpg' alt='post_thumbnail'/></Link>
                 </div>
             );
 		}

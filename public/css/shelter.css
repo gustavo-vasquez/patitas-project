@@ -16,6 +16,10 @@
 
 /* Barra superior */
 
+.shelter-details-wrapper h1, .shelter-details-wrapper h2 {
+    font-family: 'Quicksand';
+}
+
 .bi-geo-alt-fill {
     color: orangered;
 }
@@ -146,6 +150,25 @@
 
 .information ul > li {
     list-style-type: square;
+}
+
+/* Modal de empezar proceso de adopción */
+
+#startAdoptionModal {
+    z-index: 1111;
+    background-color: #c7c0c099;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    box-shadow: 1px 1px 7px 1px #4c98ef;
+    text-align: center;
+}
+
+.modal-footer > button {
+    margin: 0 auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
 }
 
 /* Comentarios */

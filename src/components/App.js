@@ -26,7 +26,7 @@ class Layout extends React.Component {
                         <Route path="*" element={<NotFound/>}></Route>
                     </Route>
                     <Route path="/shelter/:id" element={<ShelterDetails/>}>
-                        <Route path="/shelter/:id/publication/:id" element={<Publication/>}></Route>
+                        <Route path="/shelter/:id/publication/:postid" element={<Publication/>}></Route>
                     </Route>
                     <Route path="*" element={<NotFound/>}></Route>
                 </Routes>
