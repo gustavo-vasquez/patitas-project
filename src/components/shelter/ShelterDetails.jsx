@@ -1,4 +1,8 @@
 import {Link,Outlet,useLocation,useParams} from 'react-router-dom';
+import Gallery from './sections/Gallery';
+import Comments from './sections/Comments';
+import AssociatedVeterinarians from './sections/AssociatedVeterinarians';
+import MoreInformation from './sections/MoreInformation';
 
 const shelterDb = require('../helpers/sheltersDb.json');
 
@@ -8,104 +12,6 @@ function ShelterDetails(props) {
     const params = useParams();
 
     let shelterInfo = shelterDb.find(x => x.id === params.id);
-
-    function thumbnail_loop() {
-		let thumbs = [];
-
-		for(let i = 0;i < 16;i++) {
-			thumbs.push(
-                <div className='col-md-4 col-xl-3' key={i}>
-                    <Link to={`${pathname}/publication/${i+1}`}><img className='img-fluid' src='/img/shelter/thumbnail.jpg' alt='post_thumbnail'/></Link>
-                </div>
-            );
-		}
-
-		return thumbs;
-	}
-
-    function comments_loop() {
-        let comments = [];
-        // valoraciones: excelente, muy recomendable, buen lugar, poco recomendable, un desastre
-        const estrellas = [5,4,3,2,1];
-        const leyendas = ['Excelente', 'Muy recomendable', 'Buen lugar', 'Poco recomendable', 'Un desastre'];
-
-        for(let i = 0;i < 10;i++) {
-            let stars_llenas = [];
-            if(i < estrellas.length) {
-                for(let j = 0; j < estrellas[i]; j++) {
-                    stars_llenas.push(<i className="bi bi-star-fill" key={j}></i>);
-                }
-
-                for(let k = estrellas[i]; k < 5; k++) {
-                    stars_llenas.push(<i className="bi bi-star" key={k}></i>);
-                }
-            }
-            else {
-                for(let j = 0; j < estrellas[1]; j++) {
-                    stars_llenas.push(<i className="bi bi-star-fill" key={j}></i>);
-                }
-
-                for(let k = estrellas[1]; k < 5; k++) {
-                    stars_llenas.push(<i className="bi bi-star" key={k}></i>);
-                }
-            }
-
-            comments.push(
-                <div className="col-12 col-md-6" key={i}>
-                    <div className="comment-wrapper">
-                        <div className="row">
-                            <div className="col-auto">
-                                <img className="img-fluid nav-profile-picture" src="/img/default_profile_picture.png" alt="profile_picture"/>
-                            </div>
-                            <div className="col-auto">
-                                <Link to="/user/10"><p className="comment-name">cosme_fulanito</p></Link>
-                                <p className="comment-date">27/10/2022 21:47</p>
-                            </div>
-                            <div>
-                                <h4 className="d-inline-block">{stars_llenas}</h4>
-                                <span className="ps-2">{(i < leyendas.length) ? leyendas[i] : leyendas[1]}</span>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            );
-        }
-
-        return comments;
-    }
-
-    function veterinarians_loop() {
-        let thumbs = [];
-
-		for(let i = 0;i < 2;i++) {
-			thumbs.push(
-                <div className="row" key={i}>
-                    <div className="col-auto">
-                        <img className="img-fluid" width={400} src="/img/shelter/veterinary.jpg" alt="veterinary"/>
-                    </div>
-                    <div className="col-6">
-                        <h4>Dirección:</h4>
-                        <p>Av. Belgrano 1746, Monserrat</p>
-                        <h4>Teléfono:</h4>
-                        <p>(011) 5555-5555</p>
-                        <h4>Horario:</h4>
-                        <p>Lunes a viernes 10 a 20 hs.</p>
-                        <h4>Sitio web:</h4>
-                        <p>https://www.instagram.com/veterinaria</p>
-                        <h4>Descripción:</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    </div>
-                </div>
-            );
-		}
-
-		return thumbs;
-    }
 
     return (
         <div className="shelter-details-wrapper">
@@ -139,33 +45,19 @@ function ShelterDetails(props) {
 					<div className="tab-content" id="pills-tabContent">
 						<div className="tab-pane fade show active" id="pills-animal" role="tabpanel" aria-labelledby="pills-animal-tab" tabIndex="0">
 							<div className='row thumbnails-wrapper'>
-								{thumbnail_loop()}
+								<Gallery pathname={pathname}/>
 							</div>
 						</div>
 						<div className="tab-pane fade" id="pills-comment" role="tabpanel" aria-labelledby="pills-comment-tab" tabIndex="0">
                             <div className="row">
-                            {comments_loop()}
+                                <Comments/>
                             </div>
                         </div>
 						<div className="tab-pane fade" id="pills-veterinary" role="tabpanel" aria-labelledby="pills-veterinary-tab" tabIndex="0">
-                            {veterinarians_loop()}
+                            <AssociatedVeterinarians/>
                         </div>
 						<div className="tab-pane fade" id="pills-moreinfo" role="tabpanel" aria-labelledby="pills-moreinfo-tab" tabIndex="0">
-                            <div className="row">
-                                <div className="col-6">
-                                    <img className="img-fluid" width={600} src={shelterInfo.map} alt="shelter_map"/>
-                                </div>
-                                <div className="col-6">
-                                    <h4>Dirección:</h4>
-                                    <p>{shelterInfo.address}, {shelterInfo.district}</p>
-                                    <h4>Teléfono:</h4>
-                                    <p>(011) 5555-5555</p>
-                                    <h4>Horario:</h4>
-                                    <p>Lunes a viernes 10 a 20 hs.</p>
-                                    <h4>Descripción:</h4>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                </div>
-                            </div>
+                            <MoreInformation shelterInfo={shelterInfo}/>
                         </div>
 					</div>
 				</div>

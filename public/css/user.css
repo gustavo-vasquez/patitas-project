@@ -1,0 +1,9 @@
+.notifications-wrapper h1, .notifications-wrapper h3 {
+    font-family: 'Quicksand';
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.notification {
+    margin-bottom: 2rem;
+}

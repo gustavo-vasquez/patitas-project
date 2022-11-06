@@ -88,7 +88,10 @@ function Navbar(props) {
                                     <Link className="nav-link" to="/user/profile" title="Ver perfil"><img className="img-fluid nav-profile-picture" width={24} src={userDataObject.profilePicture} alt="profile_picture"/></Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/user/settings" title="Configuración"><i className="bi bi-gear-fill"></i></Link>
+                                    <Link className="nav-link" to="/user/notifications" title="Notificaciones"><i className="bi bi-bell"></i></Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/user/settings" title="Configuración"><i className="bi bi-gear"></i></Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/user/logout" onClick={logout} title="Salir"><i className="bi bi-box-arrow-in-right"></i></Link>
