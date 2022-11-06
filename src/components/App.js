@@ -8,6 +8,7 @@ import Notifications from "./user/Notifications";
 import Shelter from './shelter/Shelter';
 import ShelterDetails from './shelter/ShelterDetails';
 import Publication from "./shelter/sections/Publication";
+import Missing from "./forum/Missing";
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -28,6 +29,7 @@ class Layout extends React.Component {
                     <Route path="/shelter/:id" element={<ShelterDetails/>}>
                         <Route path="/shelter/:id/publication/:postid" element={<Publication/>}></Route>
                     </Route>
+                    <Route path="/forum/missing" element={<Missing/>}></Route>
                     <Route path="*" element={<NotFound/>}></Route>
                 </Routes>
                 <Footer></Footer>
