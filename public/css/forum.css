@@ -19,6 +19,17 @@
 
 .user-panel .card-title {
     padding-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.forum-user-contact {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.forum-user-contact p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
 }
 
 .forum-date, .forum-comment-number {

@@ -48,8 +48,9 @@ function Navbar(props) {
                                     Foros
                                 </Link>
                                 <ul className="dropdown-menu">
-                                    <li><Link className="dropdown-item" to="/forum/abandoned">Animales abandonados</Link></li>
                                     <li><Link className="dropdown-item" to="/forum/missing">Mascotas perdidas</Link></li>
+                                    <li><Link className="dropdown-item" to="/forum/abandoned">Animales callejeros</Link></li>
+                                    <li><hr className="dropdown-divider"/></li>
                                     <li><Link className="dropdown-item" to="/forum/news">Noticias</Link></li>
                                     <li><hr className="dropdown-divider"/></li>
                                     <li><Link className="dropdown-item" to="/forum/support">Ayuda y asistencia</Link></li>
