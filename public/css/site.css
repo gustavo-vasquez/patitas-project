@@ -122,6 +122,9 @@ a{
 
 .btn-primary:hover {
 	background-color: #3b81ff !important;
+}
+
+button[class*="btn-"]:hover {
 	box-shadow: 0px 1px 4px 0px #424242;
 }
 
