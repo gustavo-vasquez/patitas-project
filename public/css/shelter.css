@@ -192,3 +192,7 @@
     font-size: 0.9rem;
     color: gray;
 }
+
+#pills-veterinary > .row:not(:last-child) {
+    padding-bottom: 4rem;
+}

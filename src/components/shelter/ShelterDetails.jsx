@@ -79,6 +79,34 @@ function ShelterDetails(props) {
         return comments;
     }
 
+    function veterinarians_loop() {
+        let thumbs = [];
+
+		for(let i = 0;i < 2;i++) {
+			thumbs.push(
+                <div className="row" key={i}>
+                    <div className="col-auto">
+                        <img className="img-fluid" width={400} src="/img/shelter/veterinary.jpg" alt="veterinary"/>
+                    </div>
+                    <div className="col-6">
+                        <h4>Dirección:</h4>
+                        <p>Av. Belgrano 1746, Monserrat</p>
+                        <h4>Teléfono:</h4>
+                        <p>(011) 5555-5555</p>
+                        <h4>Horario:</h4>
+                        <p>Lunes a viernes 10 a 20 hs.</p>
+                        <h4>Sitio web:</h4>
+                        <p>https://www.instagram.com/veterinaria</p>
+                        <h4>Descripción:</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            );
+		}
+
+		return thumbs;
+    }
+
     return (
         <div className="shelter-details-wrapper">
             <div className="row">
@@ -119,8 +147,26 @@ function ShelterDetails(props) {
                             {comments_loop()}
                             </div>
                         </div>
-						<div className="tab-pane fade" id="pills-veterinary" role="tabpanel" aria-labelledby="pills-veterinary-tab" tabIndex="0">Pendiente...</div>
-						<div className="tab-pane fade" id="pills-moreinfo" role="tabpanel" aria-labelledby="pills-moreinfo-tab" tabIndex="0">Pendiente...</div>
+						<div className="tab-pane fade" id="pills-veterinary" role="tabpanel" aria-labelledby="pills-veterinary-tab" tabIndex="0">
+                            {veterinarians_loop()}
+                        </div>
+						<div className="tab-pane fade" id="pills-moreinfo" role="tabpanel" aria-labelledby="pills-moreinfo-tab" tabIndex="0">
+                            <div className="row">
+                                <div className="col-6">
+                                    <img className="img-fluid" width={600} src={shelterInfo.map} alt="shelter_map"/>
+                                </div>
+                                <div className="col-6">
+                                    <h4>Dirección:</h4>
+                                    <p>{shelterInfo.address}, {shelterInfo.district}</p>
+                                    <h4>Teléfono:</h4>
+                                    <p>(011) 5555-5555</p>
+                                    <h4>Horario:</h4>
+                                    <p>Lunes a viernes 10 a 20 hs.</p>
+                                    <h4>Descripción:</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                </div>
+                            </div>
+                        </div>
 					</div>
 				</div>
             </div>

@@ -63,7 +63,7 @@ function Publication() {
                                 <span>Raza:</span>
                                 <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> Labrador</p>
                                 <span>Altura:</span>
-                                <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> 60cm</p>
+                                <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> 60cm.</p>
                                 <p>Observaciones:</p>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
                             </div>
