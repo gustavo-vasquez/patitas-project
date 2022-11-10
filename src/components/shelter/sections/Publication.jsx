@@ -51,11 +51,11 @@ function Publication() {
                             </div>
                             <div className="information">
                                 <span>Nombre:</span>
-                                <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> Chispita</p>
+                                <p><img className="img-fluid" width={20} src="/img/huellas.png" alt="huella"/> Chispita</p>
                                 <span>Edad aproximada:</span>
-                                <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> 4 años</p>
+                                <p><img className="img-fluid" width={20} src="/img/huellas.png" alt="huella"/> 4 años</p>
                                 <span>Situación previa:</span>
-                                <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> En la calle</p>
+                                <p><img className="img-fluid" width={20} src="/img/huellas.png" alt="huella"/> En la calle</p>
                                 <span>Vacunas aplicadas:</span>
                                 <ul>
                                     <li>Rabia</li>
@@ -63,13 +63,13 @@ function Publication() {
                                     <li>Parvovirus</li>
                                 </ul>
                                 <span>Raza:</span>
-                                <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> Labrador</p>
+                                <p><img className="img-fluid" width={20} src="/img/huellas.png" alt="huella"/> Labrador</p>
                                 <span>Altura:</span>
-                                <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> 60cm.</p>
+                                <p><img className="img-fluid" width={20} src="/img/huellas.png" alt="huella"/> 60cm.</p>
                                 <span>Esterilizado</span>
-                                <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> Si</p>
+                                <p><img className="img-fluid" width={20} src="/img/huellas.png" alt="huella"/> Si</p>
                                 <span>Desparasitado</span>
-                                <p><img className="img-fluid" width={20} src="/img/posts/huellas.png" alt="huella"/> Si</p>
+                                <p><img className="img-fluid" width={20} src="/img/huellas.png" alt="huella"/> Si</p>
                                 <p>Observaciones:</p>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
                             </div>

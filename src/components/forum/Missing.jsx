@@ -54,15 +54,15 @@ function Missing() {
                     <div className="col-md-3 user-panel">
                         <div className="card-body">
                             <img className="img-fluid" width={80} src="/img/default_profile_picture.png" alt="profile_picture"/>
-                            <h5 className="card-title">cosme_fulanito</h5>
+                            <h5 className="card-title">bob_patiño</h5>
                             <small className="text-muted"><i className="bi bi-geo-alt-fill"></i> Palermo</small>
                             <div className="forum-user-contact">
-                                <p><i className="bi bi-envelope-fill"></i> cosme.fulanito@gmail.com</p>
+                                <p><i className="bi bi-envelope-fill"></i> bob.patiño@gmail.com</p>
                                 <p><i className="bi bi-telephone-fill"></i> (011) 5555-5555</p>
                             </div>
                             <p className="card-text pt-2">Mensajes: <Link to="/forum/search?userid=18&topic=all">2302</Link></p>
                             <span className="d-block"><small>Usuario desde</small></span>
-                            <span className="d-block"><small>20/10/2022</small></span>
+                            <span className="d-block"><small>18/10/2022</small></span>
                         </div>
                     </div>
                     <div className="col-md-9 message-wrapper">

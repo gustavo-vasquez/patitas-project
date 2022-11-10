@@ -25,47 +25,51 @@ function Profile() {
                             <div className="row">
                                 <div id="adoption_form_wrapper">
                                     <h4>Para poder postularse e iniciar el proceso de adopción de un animal, es necesario que completes este formulario para brindarle información a los refugios sobre tu persona y te tengan en consideración.</h4>
-									{/*<img className="img-fluid" width={300} src="https://cdn.wamiz.fr/article/images/WAMIZ%20ES/FEBRERO%202021/MARZO%202021/gatoguinandoojoysonriendo.jpg" alt="gato"/>*/}
-									<div class="card">
-										<div class="card-body">
+									<img className="img-fluid" width={300} src="/img/gato_guiñando_ojo.png" alt="gato_guiñando_ojo"/>
+									<div className="card">
+										<div className="row">
+											<div className="col-6 form-fingerprint"><img className="img-fluid pt-1" src="/img/huellas.png" alt="huella"/></div>
+											<div className="col-6 form-fingerprint"><img className="img-fluid pt-1" src="/img/huellas.png" alt="huella"/></div>
+										</div>
+										<div className="card-body">
 											<p><span className="badge rounded-pill text-bg-danger"><i className="bi bi-exclamation-circle"></i> Importante:</span> tus respuestas serán evaluadas por los responsables del refugio y, en base a su criterio, tu solicitud de adopción será aceptada o rechazada.</p>											
 											<div className="row">
 												<div className="col">
 													<div className="form-field">
 														<p>¿Alguna vez tuvo a cargo alguna mascota?*</p>	
-														<div class="form-check form-check-inline">
-																<input class="form-check-input" type="radio" name="radioI" id="inlineRadio1" value="option1"/>
-																<label class="form-check-label" for="inlineRadio1">Si</label>
+														<div className="form-check form-check-inline">
+																<input className="form-check-input" type="radio" name="radioI" id="inlineRadio1" value="option1"/>
+																<label className="form-check-label" htmlFor="inlineRadio1">Si</label>
 														</div>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioI" id="inlineRadio2" value="option2"/>
-															<label class="form-check-label" for="inlineRadio2">No</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioI" id="inlineRadio2" value="option2"/>
+															<label className="form-check-label" htmlFor="inlineRadio2">No</label>
 														</div>
 													</div>
 													<div className="form-field">
 														<p>¿Convive con más personas?*</p>	
-														<div class="form-check form-check-inline">
-																<input class="form-check-input" type="radio" name="radioII" id="inlineRadio3" value="option1"/>
-																<label class="form-check-label" for="inlineRadio3">Si</label>
+														<div className="form-check form-check-inline">
+																<input className="form-check-input" type="radio" name="radioII" id="inlineRadio3" value="option1"/>
+																<label className="form-check-label" htmlFor="inlineRadio3">Si</label>
 														</div>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioII" id="inlineRadio4" value="option2"/>
-															<label class="form-check-label" for="inlineRadio4">No</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioII" id="inlineRadio4" value="option2"/>
+															<label className="form-check-label" htmlFor="inlineRadio4">No</label>
 														</div>
 													</div>
 													<div className="form-field">
 														<p>¿Cuántos ambientes tiene su hogar?*</p>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioIII" id="inlineRadio5" value="option1"/>
-															<label class="form-check-label" for="inlineRadio5">2</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioIII" id="inlineRadio5" value="option1"/>
+															<label className="form-check-label" htmlFor="inlineRadio5">2</label>
 														</div>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioIII" id="inlineRadio6" value="option2"/>
-															<label class="form-check-label" for="inlineRadio6">3</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioIII" id="inlineRadio6" value="option2"/>
+															<label className="form-check-label" htmlFor="inlineRadio6">3</label>
 														</div>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioIII" id="inlineRadio7" value="option3"/>
-															<label class="form-check-label" for="inlineRadio7">4 o más</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioIII" id="inlineRadio7" value="option3"/>
+															<label className="form-check-label" htmlFor="inlineRadio7">4 o más</label>
 														</div>
 													</div>
 													<div className="form-field">
@@ -74,92 +78,97 @@ function Profile() {
 													</div>
 													<div className="form-field">
 														<p>Su hogar tiene...*</p>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"/>
-															<label class="form-check-label" for="inlineCheckbox1">Patio (para perros)</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"/>
+															<label className="form-check-label" htmlFor="inlineCheckbox1">Patio (para perros)</label>
 														</div>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"/>
-															<label class="form-check-label" for="inlineCheckbox2">Balcón (para perros)</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"/>
+															<label className="form-check-label" htmlFor="inlineCheckbox2">Balcón (para perros)</label>
 														</div>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"/>
-															<label class="form-check-label" for="inlineCheckbox3">Redes en ventanas a altura (para gatos)</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"/>
+															<label className="form-check-label" htmlFor="inlineCheckbox3">Redes en ventanas a altura (para gatos)</label>
 														</div>
 													</div>
 													<div className="form-field">
 														<p>¿Posee mascotas actualmente?*</p>	
-														<div class="form-check form-check-inline">
-																<input class="form-check-input" type="radio" name="radioIV" id="inlineRadio8" value="option1"/>
-																<label class="form-check-label" for="inlineRadio8">Si</label>
+														<div className="form-check form-check-inline">
+																<input className="form-check-input" type="radio" name="radioIV" id="inlineRadio8" value="option1"/>
+																<label className="form-check-label" htmlFor="inlineRadio8">Si</label>
 														</div>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioIV" id="inlineRadio9" value="option2"/>
-															<label class="form-check-label" for="inlineRadio9">No</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioIV" id="inlineRadio9" value="option2"/>
+															<label className="form-check-label" htmlFor="inlineRadio9">No</label>
 														</div>
 													</div>
 													<div className="form-field">
 														<p>¿Tiene conocimiento acerca de la ley del maltrato animal?*</p>
-														<div class="form-check form-check-inline">
-																<input class="form-check-input" type="radio" name="radioV" id="inlineRadio10" value="option1"/>
-																<label class="form-check-label" for="inlineRadio10">Si</label>
+														<div className="form-check form-check-inline">
+																<input className="form-check-input" type="radio" name="radioV" id="inlineRadio10" value="option1"/>
+																<label className="form-check-label" htmlFor="inlineRadio10">Si</label>
 														</div>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioV" id="inlineRadio11" value="option2"/>
-															<label class="form-check-label" for="inlineRadio11">No</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioV" id="inlineRadio11" value="option2"/>
+															<label className="form-check-label" htmlFor="inlineRadio11">No</label>
 														</div>
 													</div>
 													<div className="form-field">
 														<p>¿Con que frecuencia quedaría solo el animal en el hogar?...*</p>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioVI" id="inlineRadio12" value="option1"/>
-															<label class="form-check-label" for="inlineRadio12">Poco frecuente</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioVI" id="inlineRadio12" value="option1"/>
+															<label className="form-check-label" htmlFor="inlineRadio12">Poco frecuente</label>
 														</div>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioVI" id="inlineRadio13" value="option2"/>
-															<label class="form-check-label" for="inlineRadio13">Algo frecuente</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioVI" id="inlineRadio13" value="option2"/>
+															<label className="form-check-label" htmlFor="inlineRadio13">Algo frecuente</label>
 														</div>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioVI" id="inlineRadio14" value="option3"/>
-															<label class="form-check-label" for="inlineRadio14">Muy frecuente</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioVI" id="inlineRadio14" value="option3"/>
+															<label className="form-check-label" htmlFor="inlineRadio14">Muy frecuente</label>
 														</div>
 													</div>
 													<div className="form-field">
 														<p>Si hubiera una emergencia con el animal, ¿tendria alguien a quien recurrir para que lo lleve al veterinario?*</p>
-														<div class="form-check form-check-inline">
-																<input class="form-check-input" type="radio" name="radioVII" id="inlineRadio15" value="option1"/>
-																<label class="form-check-label" for="inlineRadio15">Si</label>
+														<div className="form-check form-check-inline">
+																<input className="form-check-input" type="radio" name="radioVII" id="inlineRadio15" value="option1"/>
+																<label className="form-check-label" htmlFor="inlineRadio15">Si</label>
 														</div>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioVII" id="inlineRadio16" value="option2"/>
-															<label class="form-check-label" for="inlineRadio16">No</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioVII" id="inlineRadio16" value="option2"/>
+															<label className="form-check-label" htmlFor="inlineRadio16">No</label>
 														</div>
 													</div>
 													<div className="form-field">
 														<p>¿Su remuneración es acorde a los gastos que estima tener para el cuidado del animal?*</p>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioVIII" id="inlineRadio17" value="option1"/>
-															<label class="form-check-label" for="inlineRadio17">Si</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioVIII" id="inlineRadio17" value="option1"/>
+															<label className="form-check-label" htmlFor="inlineRadio17">Si</label>
 														</div>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioVIII" id="inlineRadio18" value="option2"/>
-															<label class="form-check-label" for="inlineRadio18">No</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioVIII" id="inlineRadio18" value="option2"/>
+															<label className="form-check-label" htmlFor="inlineRadio18">No</label>
 														</div>
 													</div>
 													<div className="form-field">
 														<p>¿Tiene familiares o conocidos que lo aconsejen (gracias a su experiencia) ante cualquier eventualidad durante la crianza del animal?*</p>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioIX" id="inlineRadio19" value="option1"/>
-															<label class="form-check-label" for="inlineRadio19">Si</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioIX" id="inlineRadio19" value="option1"/>
+															<label className="form-check-label" htmlFor="inlineRadio19">Si</label>
 														</div>
-														<div class="form-check form-check-inline">
-															<input class="form-check-input" type="radio" name="radioIX" id="inlineRadio20" value="option2"/>
-															<label class="form-check-label" for="inlineRadio20">No</label>
+														<div className="form-check form-check-inline">
+															<input className="form-check-input" type="radio" name="radioIX" id="inlineRadio20" value="option2"/>
+															<label className="form-check-label" htmlFor="inlineRadio20">No</label>
 														</div>
 													</div>
 													<p><small><i>(*) Todos los campos son obligatorios</i></small></p>
+													<button className="btn btn-primary">Guardar cambios</button>
 												</div>
 											</div>
+										</div>
+										<div className="row">
+											<div className="col-6 form-fingerprint"><img className="img-fluid pb-1" src="/img/huellas.png" alt="huella"/></div>
+											<div className="col-6 form-fingerprint"><img className="img-fluid pb-1" src="/img/huellas.png" alt="huella"/></div>
 										</div>
 									</div>
                                 </div>

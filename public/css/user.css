@@ -12,9 +12,9 @@
     text-align: center;
 }
 
-#adoption_form_wrapper > .card {
+/* #adoption_form_wrapper > .card {
     margin-top: 2rem;
-}
+} */
 
 .badge {
     font-size: initial;
@@ -30,4 +30,25 @@
     width: auto;
     margin: 0 auto;
     text-align: center;
+}
+
+.form-fingerprint:nth-child(even) {
+    text-align: right;
+}
+
+.form-fingerprint:nth-child(odd) {
+    text-align: left;
+}
+
+.form-fingerprint > img {
+    width: 40px;
+    opacity: 0.5;
+}
+
+.form-fingerprint:nth-child(even) > img {
+    padding-right: 0.5rem;
+}
+
+.form-fingerprint:nth-child(odd) > img {
+    padding-left: 0.5rem;
 }

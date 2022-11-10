@@ -84,7 +84,7 @@ body {
   	bottom: 0;
   	right: 0;
   	z-index: -1;
-	background-image: url('../img/posts/huellas.png');
+	background-image: url('../img/huellas.png');
 	background-repeat: repeat;
 	opacity: 0.016;
 }

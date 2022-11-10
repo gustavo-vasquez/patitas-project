@@ -16,10 +16,10 @@ function Shelter(props) {
                 <div className="col-6" key={index}>
                     <div className="card shelter-card mb-3">
                         <div className="row g-0">
-                            <div className="col-auto">
+                            <div className="col-2">
                                 <img className="img-fluid rounded-start" width={100} src="/img/shelter/shelter.png" alt="refugio"/>
                             </div>
-                            <div className="col-8">
+                            <div className="col-10">
                                 <div className="card-body">
                                     <Link to={`/shelter/${shelter.id}`} className="list-group-item list-group-item-action" aria-current="true">
                                         <div className="d-flex w-100 justify-content-between">
