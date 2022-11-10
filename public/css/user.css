@@ -7,3 +7,27 @@
 .notification {
     margin-bottom: 2rem;
 }
+
+#adoption_form_wrapper {
+    text-align: center;
+}
+
+#adoption_form_wrapper > .card {
+    margin-top: 2rem;
+}
+
+.badge {
+    font-size: initial;
+    font-weight: normal;
+}
+
+.form-field {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.form-field input[class="form-control"] {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}

@@ -1,18 +1,18 @@
 [
     {
         "id": "1",
-        "name": "Refugio #1",
+        "name": "Refugio San Pedro",
         "stars": "4.5",
-        "address": "Moreno 1623",
-        "district": "Monserrat",
+        "address": "Av. del Libertador 4101",
+        "district": "Palermo",
         "map": "/img/shelter/maps/shelter_1.png"
     },
     {
         "id": "2",
         "name": "Refugio #2",
         "stars": "3",
-        "address": "Av. del Libertador 4101",
-        "district": "Palermo",
+        "address": "Moreno 1623",
+        "district": "Monserrat",
         "map": "/img/shelter/maps/shelter_2.png"
     },
     {

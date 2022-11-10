@@ -10,7 +10,7 @@ function AssociatedVeterinarians() {
                     </div>
                     <div className="col-6">
                         <h4>Dirección:</h4>
-                        <p>Av. Belgrano 1746, Monserrat</p>
+                        <p>Av. Sta. Fe 3253, Palermo</p>
                         <h4>Teléfono:</h4>
                         <p>(011) 5555-5555</p>
                         <h4>Horario:</h4>

@@ -4,6 +4,7 @@ import {Routes,Route} from 'react-router-dom';
 import Welcome from "./home/Welcome";
 import AuthenticationForms from "./auth/AuthenticationForms";
 //import Register from "./auth/Register";
+import Profile from "./user/Profile";
 import Notifications from "./user/Notifications";
 import Shelter from './shelter/Shelter';
 import ShelterDetails from './shelter/ShelterDetails';
@@ -22,6 +23,7 @@ class Layout extends React.Component {
                 <Routes>
                     <Route exact path="/" element={<Welcome/>}></Route>
                     <Route path="/auth/signin" element={<AuthenticationForms/>}></Route>
+                    <Route path="/user/profile" element={<Profile/>}></Route>
                     <Route path="/user/notifications" element={<Notifications/>}></Route>
                     <Route path="/shelter" element={<Shelter/>}>
                         <Route path="*" element={<NotFound/>}></Route>
