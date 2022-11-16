@@ -7,7 +7,7 @@ function Notifications() {
             <h3><i className="bi bi-eye-slash"></i> Solicitudes pendientes</h3>
             <div className="card notification text-center">
                 <div className="card-body">
-                    <h5 className="card-title">El <Link to="/shelter/1">Refugio San Pedro</Link> ha respondido tu solicitud de adopción</h5>
+                    <h5 className="card-title">El <Link to="/shelter/1">Refugio San Pedro</Link> ha respondido tu solicitud de adopción (Nº 150)</h5>
                     <img className="img-fluid" width={100} src="/img/clock.png" alt="clock"/>
                     <p className="card-text pt-2">Se te ha reservado un turno para visitar el refugio en la siguiente fecha:</p>
                     <p><b>20/11/2022 a las 12:00 hs.</b></p>

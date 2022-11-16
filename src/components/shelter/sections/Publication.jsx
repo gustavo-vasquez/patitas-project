@@ -1,6 +1,7 @@
 import {useState,useEffect, useCallback} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 
+import PreAdoptionModal from './PreAdoptionModal';
 import AdoptionProcessStarted from './AdoptionProcessStarted';
 
 function Publication() {
@@ -14,7 +15,7 @@ function Publication() {
 
     useEffect(() => {
 		const goBack = (event) => {
-			if((event.key === 'Escape') && !document.querySelector('#startAdoptionModal').classList.contains('show'))
+			if((event.key === 'Escape') && !document.querySelector('#preAdoptionModal').classList.contains('show') && !document.querySelector('#startAdoptionModal').classList.contains('show'))
 				closePublication();
 		}
 		
@@ -47,7 +48,8 @@ function Publication() {
                         <div className="post-content">
                             <div className="request-adoption">
                                 <h4>¿Te gustaría adoptarlo? ¿Quieres verlo en persona?</h4>
-                                <button className="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#startAdoptionModal">Iniciar proceso de adopción</button>
+                                {/*<button className="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#startAdoptionModal">Iniciar proceso de adopción</button>*/}
+                                <button className="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#preAdoptionModal">Iniciar proceso de adopción</button>
                             </div>
                             <div className="information">
                                 <span>Nombre:</span>
@@ -77,7 +79,7 @@ function Publication() {
                     </div>
                 </div>
             </div>
-            
+            <PreAdoptionModal/>
             <AdoptionProcessStarted/>
         </>
     );

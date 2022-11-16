@@ -155,7 +155,7 @@
 
 /* Modal de empezar proceso de adopción */
 
-#startAdoptionModal {
+#startAdoptionModal, #preAdoptionModal {
     z-index: 1111;
     background-color: #c7c0c099;
     backdrop-filter: blur(4px);
