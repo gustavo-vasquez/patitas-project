@@ -39,6 +39,7 @@
 
 .forum-comment {
     word-break: break-word;
+    min-height: 224px;
 }
 
 .forum-comment-image {

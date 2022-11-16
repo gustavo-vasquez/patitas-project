@@ -11,7 +11,14 @@ function PreAdoptionModal() {
                         </div>
                     </div>
                     <div className="modal-footer">
-                        <button className="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#startAdoptionModal">Guardar y finalizar</button>
+                        <div className="row">
+                            <div className="col-6">
+                                <button className="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-dismiss="modal"><i className="bi bi-arrow-left"></i> Volver atrás</button>
+                            </div>
+                            <div className="col-6">
+                                <button className="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#startAdoptionModal"><i className="bi bi-check-lg"></i> Guardar y finalizar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

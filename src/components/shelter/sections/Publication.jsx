@@ -1,11 +1,12 @@
-import {useState,useEffect, useCallback} from 'react';
-import {Link, useNavigate} from 'react-router-dom';
+import {useState, useEffect, useCallback} from 'react';
+import {Link, useNavigate, useParams} from 'react-router-dom';
 
 import PreAdoptionModal from './PreAdoptionModal';
 import AdoptionProcessStarted from './AdoptionProcessStarted';
 
 function Publication() {
     const navigate = useNavigate();
+    const {postid} = useParams();
     //const [didMount, setDidMount] = useState(false);
 
     const closePublication = useCallback(() => {
@@ -36,8 +37,8 @@ function Publication() {
             <div className="overlay"></div>
             <div className="post-wrapper">
                 <div className="row">
-                    <div className="col-6">
-                        <img className="img-fluid post-image" src="/img/shelter/thumbnail.jpg" alt="post_image"/>
+                    <div className="col-6 text-center">
+                        <img className="img-fluid post-image" src={`/img/shelter/animals/thumbnail_${postid}.jpg`} alt="post_image"/>
                     </div>
                     <div className="col-6">
                         <div className="close-button">
