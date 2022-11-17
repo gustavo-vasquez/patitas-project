@@ -205,3 +205,11 @@
 #pills-veterinary > .row:not(:last-child) {
     padding-bottom: 4rem;
 }
+
+canvas {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    z-index: 1111 !important;
+}

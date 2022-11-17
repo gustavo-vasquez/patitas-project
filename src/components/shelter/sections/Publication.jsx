@@ -1,5 +1,5 @@
-import {useState, useEffect, useCallback} from 'react';
-import {Link, useNavigate, useParams} from 'react-router-dom';
+import {useEffect, useCallback} from 'react';
+import {useNavigate, useParams} from 'react-router-dom';
 
 import PreAdoptionModal from './PreAdoptionModal';
 import AdoptionProcessStarted from './AdoptionProcessStarted';
