@@ -1,26 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Register(props) {
     const navigate = useNavigate();
-	//const [didMount, setDidMount] = useState(false);
-	//const [formError, setFormError] = useState();
-
-	/*useEffect(() => {
-		const goBack = (event) => {
-			if(didMount && (event.key === 'Escape' || !event.target.closest('#authentication_wrapper')))
-				navigate(-1);
-		}
-		
-		document.addEventListener("keydown", goBack);
-		document.addEventListener("click", goBack);
-		setDidMount(true);
-
-		return () => {
-			document.removeEventListener("keydown", goBack);
-			document.removeEventListener("click", goBack);
-		}
-	}, [navigate, didMount]);*/
 
     const doRegister = (event) => {
 		event.preventDefault();

@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Proyecto "Patitas" - Mockup
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Primera etapa del proyecto "Patitas" para la Licenciatura en Gestión de Tecnología de la Universidad Nacional de la Matanza.
 
-## Available Scripts
+*Ofrecemos una plataforma centralizada de refugios de animales con gestión de las adopciones e interacción de la comunidad para el rescate de mascotas.*
 
-In the project directory, you can run:
+## Portada
 
-### `npm start`
+![Portada del proyecto](/public/img/screenshots/patitas_portada.jpg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Búsqueda de refugios
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Resultados de búsqueda de refugios](/public/img/screenshots/patitas_lista_refugios.jpg)
 
-### `npm test`
+## Animales del refugio
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Listado de animales del refugio](/public/img/screenshots/patitas_refugio_animales.jpg)
 
-### `npm run build`
+## Información del animal
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Información detallada del animal](/public/img/screenshots/patitas_informaci%C3%B3n_animal.jpg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Pasos para ejecutar el proyecto "Patitas":**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Descargar e instalar NodeJS desde la página oficial -> https://nodejs.org/en/
 
-### `npm run eject`
+2. Descomprimir patitas-project.zip
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. En el directorio raíz del proyecto, abrir la consola de Windows (o powershell) y ejecutar el comando: npm install (para restaurar dependencias)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Una vez terminado el proceso debería aparecer una nueva carpeta llamada "node_modules"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Ejecutar el comando: npm start (el proyecto debería ejecutarse en el navegador)

@@ -1,15 +1,11 @@
 import React from 'react';
-import {Link,useLocation,useNavigate} from 'react-router-dom';
+import {Link,useNavigate} from 'react-router-dom';
 import {Search} from './Search';
 
 function Navbar(props) {
-    //const location = useLocation();
     const navigate = useNavigate();
     
     let userDataObject;
-    //let {pathname} = location;
-    //let username, email, profilePicture;
-    //console.log(location);
     let userDataString = localStorage.getItem('userData');
     
     if(userDataString) {
@@ -58,20 +54,6 @@ function Navbar(props) {
                                 </ul>
                             </li>
                         </ul>
-                        {/*<ul className="navbar-nav">
-                            <li className="nav-item">
-                                <Link className="nav-link" aria-current="page" to="#">Sobre nosotros</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="#">Tutorial</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="#">Como aportar</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="#">Contacto</Link>
-                            </li>
-                        </ul>*/}
                         <div id="search_wrapper" className="d-flex mx-auto">
                             <Search/>
                         </div>

@@ -1,12 +1,10 @@
 import React from 'react';
-import {Link,useLocation,useNavigate} from 'react-router-dom';
+import {Link,useNavigate} from 'react-router-dom';
 
 const shelterDb = require('./helpers/sheltersDb.json');
 
 export const Search = (props) => {
-	//const location = useLocation();
 	const navigate = useNavigate();
-	//let shouldBeFocus = location.pathname === '/' ? true : false;
 
 	const triggerSuggestions = (event) => {
 		if(event.target.value.length >= 3) {
@@ -24,16 +22,6 @@ export const Search = (props) => {
 
 	return (
 		<div className="input-group">
-			{/*<button id="shelter_zones" className="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Recoleta</button>
-			<ul className="dropdown-menu">
-				<li><a className="dropdown-item" href="#shelter_input">Congreso</a></li>
-				<li><a className="dropdown-item" href="#shelter_input">Monserrat</a></li>
-				<li><a className="dropdown-item" href="#shelter_input">Palermo</a></li>
-				<li><a className="dropdown-item" href="#shelter_input">San Isidro</a></li>
-				<li><a className="dropdown-item" href="#shelter_input">Saavedra</a></li>
-				<li><hr className="dropdown-divider"/></li>
-				<li><a className="dropdown-item" href="#shelter_input">Capital federal</a></li>
-			</ul>*/}
 			<input id="shelter_search" onChange={triggerSuggestions} onFocus={triggerSuggestions} type="text" className="form-control" placeholder="Buscar por refugio o barrio porteño" aria-label="Buscar por refugio o barrio porteño"/>
 			<button id="shelter_search_button" type="button" className="btn"><i className="bi bi-search"></i></button>
 			<div className="list-group suggestions-wrapper" style={{'display': 'none'}}>

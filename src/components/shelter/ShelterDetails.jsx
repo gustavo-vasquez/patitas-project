@@ -1,4 +1,4 @@
-import {Link,Outlet,useLocation,useParams} from 'react-router-dom';
+import {Outlet,useLocation,useParams} from 'react-router-dom';
 import Gallery from './sections/Gallery';
 import Comments from './sections/Comments';
 import AssociatedVeterinarians from './sections/AssociatedVeterinarians';

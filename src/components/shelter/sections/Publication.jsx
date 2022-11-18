@@ -7,7 +7,6 @@ import AdoptionProcessStarted from './AdoptionProcessStarted';
 function Publication() {
     const navigate = useNavigate();
     const {postid} = useParams();
-    //const [didMount, setDidMount] = useState(false);
 
     const closePublication = useCallback(() => {
         document.body.style.overflow = '';
@@ -21,14 +20,11 @@ function Publication() {
 		}
 		
 		document.addEventListener("keydown", goBack);
-		//document.addEventListener("click", goBack);
         
         document.body.style.overflow = "hidden";
-		//setDidMount(true);
 
 		return () => {
 			document.removeEventListener("keydown", goBack);
-			//document.removeEventListener("click", goBack);
 		}
 	}, [navigate,closePublication]);
 
@@ -49,7 +45,6 @@ function Publication() {
                         <div className="post-content">
                             <div className="request-adoption">
                                 <h4>¿Te gustaría adoptarlo? ¿Quieres verlo en persona?</h4>
-                                {/*<button className="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#startAdoptionModal">Iniciar proceso de adopción</button>*/}
                                 <button className="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#preAdoptionModal">Iniciar proceso de adopción</button>
                             </div>
                             <div className="information">

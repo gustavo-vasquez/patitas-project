@@ -3,7 +3,6 @@ import {Routes,Route} from 'react-router-dom';
 
 import Welcome from "./home/Welcome";
 import AuthenticationForms from "./auth/AuthenticationForms";
-//import Register from "./auth/Register";
 import Profile from "./user/Profile";
 import Notifications from "./user/Notifications";
 import Shelter from './shelter/Shelter';
